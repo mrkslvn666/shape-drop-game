@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Adaptive Game</title>
+    <style>
+        @media (max-width: 600px) {
+            #gameCanvas {
+                width: 100%;
+                height: auto;
+            }
+            .container {
+                text-align: center;
+            }
+            .button-container {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: 10px;
+            }
+            .button {
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <div class="">
+                <p>Shape Frequency: <span id="shapeFrequency">1</span></p>
+                <button class="button" onclick="adjustShapeFrequency(1)">Increase Frequency</button>
+                <button class="button" onclick="adjustShapeFrequency(-1)">Decrease Frequency</button>
+            </div>
+            <div class="">
+                <p>Gravity: <span id="gravity">1</span></p>
+                <button class="button" onclick="adjustGravity(1)">Increase Gravity</button>
+                <button class="button" onclick="adjustGravity(-1)">Decrease Gravity</button>
+            </div>
+        </div>
+        <p>Shape Count: <span id="shapeCount">0</span></p>
+        <p>Surface Area: <span id="surfaceArea">0 px^2</span></p>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
